@@ -1,3 +1,6 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
 generator client {
   provider = "prisma-client-js"
 }
@@ -8,21 +11,30 @@ datasource db {
 }
 
 model User {
-  id        String     @id @default(cuid())
-  email     String     @unique
-  password  String
-  name      String?
-  createdAt DateTime   @default(now())
-  words     Word[]
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relation to the Word model
+  words Word[]
+
+  @@map("users")
 }
 
 model Word {
-  id            String   @id @default(cuid())
-  term          String
-  definition    String
-  boxNumber     Int      @default(1)
-  lastReviewed  DateTime?
-  createdAt     DateTime @default(now())
-  userId        String
-  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id         String   @id @default(cuid())
+  term       String
+  definition String
+  boxNumber  Int      @default(1)
+  userId     String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  lastReview DateTime @default(now())
+  nextReview DateTime @default(now())
+
+  // Relation back to the User model
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("words")
 }

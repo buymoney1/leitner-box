@@ -1,3 +1,5 @@
+// tailwind.config.js
+
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -9,7 +11,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      // می‌توانید انیمیشن‌های سفارشی خود را اینجا اضافه کنید
+      // اتصال فونت پیش‌فرض به Vazirmatn
+      fontFamily: {
+        sans: ['var(--font-vazirmatn)', 'sans-serif'],
+      },
+      // انیمیشن‌های سفارشی شما
       keyframes: {
         "rotate-y": {
           "0%": { transform: "rotateY(0deg)" },

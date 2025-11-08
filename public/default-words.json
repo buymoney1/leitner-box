@@ -1,12 +1,12 @@
 [
-  { "term": "Apple", "definition": "???" },
-  { "term": "Book", "definition": "????" },
-  { "term": "Computer", "definition": "????????" },
-  { "term": "Dream", "definition": "????" },
-  { "term": "Freedom", "definition": "?????" },
-  { "term": "Garden", "definition": "???" },
-  { "term": "Happy", "definition": "??????" },
-  { "term": "Important", "definition": "???" },
-  { "term": "Journey", "definition": "???" },
-  { "term": "Knowledge", "definition": "????" }
+  { "term": "Apple", "definition": "سیب" },
+  { "term": "Book", "definition": "کتاب" },
+  { "term": "Computer", "definition": "کامپیوتر" },
+  { "term": "Dream", "definition": "رویا" },
+  { "term": "Freedom", "definition": "آزادی" },
+  { "term": "Garden", "definition": "باغ" },
+  { "term": "Happy", "definition": "خوشحال" },
+  { "term": "Important", "definition": "مهم" },
+  { "term": "Journey", "definition": "سفر" },
+  { "term": "Knowledge", "definition": "دانش" }
 ]
